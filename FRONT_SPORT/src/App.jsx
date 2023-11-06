@@ -1,15 +1,17 @@
 import { useState } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import FirstPage from './pages/FirstPage'
 
 import './App.css'
 
 function App() {
 
   return (
-    <>
-      <div className='text-amber-400 w-full h-[100dvh] bg-black/80 text-center'>
-        Nice
-      </div>
-    </>
+    <Router>
+      <Routes>
+        <Route path='/' element={ <FirstPage/> } />
+      </Routes>
+    </Router>
   )
 }
 
