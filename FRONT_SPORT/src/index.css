@@ -5,3 +5,7 @@
 .nav-bar{
   width: min(90%, 1280px);
 }
+.section-hero{
+  width: min(90%, 1280px);
+  margin-inline: auto;
+}

@@ -8,8 +8,8 @@ const navigation = [
 
     { name: 'A propos', href: '#', current: false },
     { name: 'Nos offres', href: '#', current: false },
+    { name: 'Nos services', href: '#', current: false },
     { name: 'Contact', href: '#', current: false },
-    { name: 'Services', href: '#', current: false },
 ]
 
 function classNames(...classes) {
@@ -18,7 +18,7 @@ function classNames(...classes) {
 
 export default function Navbar() {
     return (
-        <Disclosure as="nav" className="bg-[#363062] sticky top-0">
+        <Disclosure as="nav" className="bg-black bg-opacity-25 sticky top-0">
         {({ open }) => (
             <>
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -37,7 +37,7 @@ export default function Navbar() {
                 </div>
                 <div className="flex relative max-sm:w-full max-sm:justify-center w-full items-center sm:justify-between sm:items-stretch">
                     <div className="flex flex-shrink-0 items-center">
-                        <Link to='/' className='text-[#E0F4FF] bg-[#39A7FF] rounded-md px-3 py-2 font-semibold'>
+                        <Link to='/' className='text-[#E0F4FF] bg-cyan-500 rounded-md px-3 py-2 font-semibold'>
                             Acceuil
                         </Link>
                     </div>
@@ -47,7 +47,7 @@ export default function Navbar() {
                         <a
                             key={item.name}
                             href={item.href}
-                            className='text-gray-300 hover:bg-[#39A7FF] hover:text-white rounded-md px-3 py-2 text-sm font-semibold'
+                            className='text-gray-300 hover:bg-cyan-500 hover:text-white rounded-md px-3 py-2 text-sm font-semibold'
                             aria-current={item.current ? 'page' : undefined}
                         >
                             {item.name}
@@ -57,7 +57,7 @@ export default function Navbar() {
                     </div>
                     <div className='max-sm:absolute max-sm:inset-y-0 max-sm:right-0 max-sm:flex max-sm:items-center flex flex-shrink-0 items-center'>
                         <Link to='/' className='text-xl text-[#E0F4FF] font-semibold'>
-                            Logo
+                            M'chic
                         </Link>
                     </div>
                 </div>
@@ -72,7 +72,7 @@ export default function Navbar() {
                     as="a"
                     href={item.href}
                     className={classNames(
-                        item.current ? 'bg-[#39A7FF] text-[#E0F4FF]' : 'text-[#E0F4FF] hover:bg-[#39A7FF] hover:text-white',
+                        item.current ? 'bg-cyan-500 text-[#E0F4FF]' : 'text-[#E0F4FF] hover:bg-cyan-500 hover:text-white',
                         'block rounded-md px-3 py-2 text-base font-medium'
                     )}
                     aria-current={item.current ? 'page' : undefined}
