@@ -42,7 +42,7 @@ const CallApi = () => {
                             src={''}
                             type={''}
                         />
-                    {console.log(data.video_files[0])}
+                    {console.log(data.image)}
                 </video>
                 </section>
             </div>
