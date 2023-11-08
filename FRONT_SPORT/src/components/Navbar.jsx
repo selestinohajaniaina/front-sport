@@ -1,12 +1,13 @@
 import { Fragment } from 'react'
 import { Link } from 'react-router-dom'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Disclosure } from '@headlessui/react'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import Logo from '../assets/logo.svg'
 
 const navigation = [
 
 
-    { name: 'A propos', href: '#', current: false },
+    { name: 'A propos', href: '#about', current: false },
     { name: 'Nos offres', href: '#', current: false },
     { name: 'Nos services', href: '#', current: false },
     { name: 'Contact', href: '#', current: false },
@@ -57,7 +58,7 @@ export default function Navbar() {
                     </div>
                     <div className='max-sm:absolute max-sm:inset-y-0 max-sm:right-0 max-sm:flex max-sm:items-center flex flex-shrink-0 items-center'>
                         <Link to='/' className='text-xl text-[#E0F4FF] font-semibold'>
-                            M'chic
+                            <img src={Logo} alt='logo' className='w-12 h-12' />
                         </Link>
                     </div>
                 </div>

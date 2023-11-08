@@ -16,3 +16,15 @@
   width: min(90%);
   margin-inline: auto;
 }
+.div_nice{
+  width: min(90%);
+  margin-inline: auto;
+}
+.partenaire_nice{
+  grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+}
+.img_partenaire{
+  max-width: 100%;
+  height: 30dvh;
+  display: block;
+}
