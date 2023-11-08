@@ -9,3 +9,10 @@
   width: min(90%, 1280px);
   margin-inline: auto;
 }
+.bg_about{
+  background: url('../src/assets/pipe_line.png') no-repeat center center/cover;
+}
+.article_nice{
+  width: min(90%);
+  margin-inline: auto;
+}

@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import CallApi from '../components/CallApi'
+import SecondePage from './SecondePage';
 
     class ErrorBoundary extends React.Component {
         constructor(props) {
@@ -24,12 +25,15 @@ import CallApi from '../components/CallApi'
 
 const FirstPage = () => {
 return (
-    <div className='w-full h-[100dvh] bg-cyan-950'>
-        <Navbar/>
-        <ErrorBoundary>
-            <CallApi/>
-        </ErrorBoundary>
-    </div>
+    <>        
+        <div className='w-full h-[100dvh] bg-cyan-950'>
+            <Navbar/>
+            <ErrorBoundary>
+                <CallApi/>
+            </ErrorBoundary>
+        </div>
+        <SecondePage/>
+    </>
 )
 }
 
