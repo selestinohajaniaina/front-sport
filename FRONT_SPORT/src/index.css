@@ -20,11 +20,25 @@
   width: min(90%);
   margin-inline: auto;
 }
+.section_entrainement{
+  width: min(95%);
+  margin-inline: auto;
+  grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+}
+.reverse{
+  grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+  direction: rtl;
+}
 .partenaire_nice{
   grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
 }
 .img_partenaire{
   max-width: 100%;
   height: 30dvh;
+  display: block;
+}
+.image_kaly{
+  max-width: 100%;
+  height: 60dvh;
   display: block;
 }

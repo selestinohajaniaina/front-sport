@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from '../components/Navbar'
 import CallApi from '../components/CallApi'
 import SecondePage from './SecondePage';
+import ThirdPage from './ThirdPage';
 
     class ErrorBoundary extends React.Component {
         constructor(props) {
@@ -33,6 +34,7 @@ return (
             </ErrorBoundary>
         </div>
         <SecondePage/>
+        <ThirdPage/>
     </>
 )
 }

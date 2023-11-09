@@ -9,6 +9,11 @@ const Src = [
     { src: PartenaireThree, alt: 'partenaire three' }
 ];
 
+const heading_apropos = 'A PROPOS';
+const para_one = "M’Chic a été conçue dans le but d'inspirer et d'éduquer les jeunes sur les avantages du sport et d'une alimentation équilibrée pour une vie saine. Notre mission est de motiver les jeunes à s'engager activement dans des activités sportives, en mettant en avant les bienfaits du sport pour la santé physique et mentale.";
+const para_two = "Elle vise à encourager les jeunes à adopter des habitudes de vie saines et à les guider vers une meilleure compréhension de l'importance du sport et de la nutrition pour leur bien-être à long terme.";
+const para_three = "Notre objectif est de créer un environnement interactif, informatif et motivant, où les jeunes peuvent apprendre, se connecter, se soutenir mutuellement et s'engager activement dans des activités sportives et une alimentation équilibrée pour une vie plus saine. Nous croyons que l'apprentissage à travers le sport et la nutrition est un élément essentiel de l'éducation globale des jeunes pour un avenir plus sain et plus heureux.";
+
 const SecondePage = () => {
 return (
     <main className='w-full h-[130dvh]'>
@@ -23,17 +28,17 @@ return (
             <article className='article_nice h-[85dvh] flex items-center bg-zinc-300 bg-opacity-30 rounded-[50px] backdrop-blur-[35px]'>
                 <div className='div_nice flex flex-col gap-4'>
                     <div className='text-center'>
-                        <h1 className='text-cyan-500 text-4xl font-bold'>A PROPOS</h1>
+                        <h1 className='text-cyan-500 text-4xl font-bold'>{heading_apropos}</h1>
                     </div>
                     <div className='flex flex-col gap-4'>
                         <p className='text-justify text-white text-2xl font-normal'>
-                            M’Chic a été conçue dans le but d'inspirer et d'éduquer les jeunes sur les avantages du sport et d'une alimentation équilibrée pour une vie saine. Notre mission est de motiver les jeunes à s'engager activement dans des activités sportives, en mettant en avant les bienfaits du sport pour la santé physique et mentale.
+                            {para_one}
                         </p>
                         <p className='text-justify text-white text-2xl font-normal'>
-                            Elle vise à encourager les jeunes à adopter des habitudes de vie saines et à les guider vers une meilleure compréhension de l'importance du sport et de la nutrition pour leur bien-être à long terme.
+                            {para_two}
                         </p>
                         <p className='text-justify text-white text-2xl font-normal'>
-                            Notre objectif est de créer un environnement interactif, informatif et motivant, où les jeunes peuvent apprendre, se connecter, se soutenir mutuellement et s'engager activement dans des activités sportives et une alimentation équilibrée pour une vie plus saine. Nous croyons que l'apprentissage à travers le sport et la nutrition est un élément essentiel de l'éducation globale des jeunes pour un avenir plus sain et plus heureux.
+                            {para_three}
                         </p>
                     </div>
                 </div>
