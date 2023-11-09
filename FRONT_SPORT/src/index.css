@@ -42,3 +42,13 @@
   height: 60dvh;
   display: block;
 }
+.services{
+  width: min(90%);
+  margin-inline: auto;
+  grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+}
+.coach{
+  max-width: 100%;
+  display: block;
+  height: 35dvh;
+}
