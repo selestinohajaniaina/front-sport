@@ -52,3 +52,11 @@
   display: block;
   height: 35dvh;
 }
+.div_footer{
+  width: min(90%);
+  margin-inline: auto;
+  grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+}
+.resize{
+  resize: none;
+}

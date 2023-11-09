@@ -4,6 +4,7 @@ import CallApi from '../components/CallApi'
 import SecondePage from './SecondePage';
 import ThirdPage from './ThirdPage';
 import FourthPage from './FourthPage';
+import Footer from './Footer';
 
     class ErrorBoundary extends React.Component {
         constructor(props) {
@@ -37,6 +38,7 @@ return (
         <SecondePage/>
         <ThirdPage/>
         <FourthPage/>
+        <Footer/>
     </>
 )
 }
