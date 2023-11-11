@@ -1,6 +1,6 @@
 import { Fragment } from 'react'
-import { auth } from '../firebase'
-import { signOut } from 'firebase/auth'
+// import { auth } from '../firebase'
+// import { signOut } from 'firebase/auth'
 import { useNavigate } from 'react-router-dom'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
@@ -33,7 +33,7 @@ export default function Dashboard() {
     const navigate = useNavigate();
     const trigger = async () => {
         try{
-            await signOut(auth);
+            // await signOut(auth);
             console.log('log out');
             navigate("/");
         }

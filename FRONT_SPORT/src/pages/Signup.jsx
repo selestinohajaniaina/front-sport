@@ -1,13 +1,16 @@
 import React from 'react'
 import { useFormik } from 'formik'
 import { useNavigate } from 'react-router-dom';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../firebase'
+// import { createUserWithEmailAndPassword } from 'firebase/auth';
+// import { auth } from '../firebase'
 import { Link } from 'react-router-dom'
 import * as Yup from 'yup';
+import axios from 'axios'
 
 const Signup = () => {
     const navigate = useNavigate();
+    const URL = 'https://sport-back.onrender.com';
+    // const URL = 'http://localhost:3000';
     const formik = useFormik({
         initialValues: {
             lastname: '',
@@ -20,13 +23,24 @@ const Signup = () => {
             password: Yup.string().max(15, 'Must be 15 characters or less').required('Required'),
         }),
         onSubmit: async (values) => {
-            try {
-                await createUserWithEmailAndPassword(auth, values.email, values.password);
-                console.log('Signup successful'); // Add this line to check if this part is executed
+            const { email, lastname, password } = values;
+            const options = {
+                method : 'POST',
+                url : `${URL}/person/add`,
+                body : {
+                    username: lastname,
+                    email: email,
+                    password: password,
+                    pays: '',
+            }}
+            console.log(options.body);
+                try {
+                    const response = await axios.get(`${URL}/person/add/${lastname}/${email}/${password}`);
                 navigate("/dashboard");
-            } catch (error) {
-                console.log(error);
-            }
+                // console.log(response);
+                } catch (error) {
+                    console.error(error);
+                }
         }
     })
 return (

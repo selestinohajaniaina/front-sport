@@ -1,13 +1,15 @@
 import React from 'react'
 import { useFormik } from 'formik'
 import { useNavigate } from 'react-router-dom';
-import { signInWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../firebase'
+// import { signInWithEmailAndPassword } from 'firebase/auth';
+// import { auth } from '../firebase'
 import { Link } from 'react-router-dom'
 import * as Yup from 'yup';
+import axios from 'axios'
 
 const Login = () => {
     const navigate = useNavigate();
+    const URL = 'https://sport-back.onrender.com';
     const formik = useFormik({
         initialValues: {
             email: '',
@@ -15,17 +17,30 @@ const Login = () => {
         },
         validationSchema: Yup.object({
             email: Yup.string().email('Invalide email address').required('Required'),
-            password: Yup.string().max(15, 'Must be 15 characters or less').required('Required'),
+            password: Yup.string().max(8, 'Must be 8 characters or less').required('Required'),
         }),
         onSubmit: async (values) => {
-            try{
-                await signInWithEmailAndPassword(auth, values.email, values.password);
-                console.log("Login successful");
-                navigate("/dashboard");
-            }
-            catch(error){
-                console.log(error)
-            }
+            const options = {
+                method: 'GET',
+                url: `${URL}/user/${values.email}`,
+            };
+                try {
+                    const response = await axios.request(options);
+                    const {data} = response.data;
+                    if(await data[0]){
+                        const {id, password, } = data[0];
+                        if (values.password == password){
+                            navigate("/dashboard");
+                        }else {
+                            alert('mot de passe incorect');
+                        }
+                    }else{
+                        alert('compte introuvable');
+
+                    }
+                } catch (error) {
+                    console.error(error);
+                }
         }
     })
 return (
