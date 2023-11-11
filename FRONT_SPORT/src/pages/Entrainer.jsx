@@ -37,7 +37,6 @@ return (
                             muted 
                             loop 
                             width="auto"
-                            className='border border-green-400'
                             >
                                 <source 
                                     src='https://www.shutterstock.com/shutterstock/videos/1093929207/preview/stock-footage-happy-family-father-teaches-daughter-to-ride-bike-in-park-daughter-riding-bike-for-first-time.webm'
