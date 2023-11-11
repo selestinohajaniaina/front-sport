@@ -44,7 +44,7 @@ return (
                         <div className='text-center flex items-center flex-col gap-4'>
                             <h1 className='text-cyan-950 text-4xl font-normal'>{item.title}</h1>
                             <p className='text-justify text-black text-2xl font-normal'>{item.subtitle}</p>
-                            <Link to='/login'>
+                            <Link to='/'>
                                 <button className='bg-cyan-500 w-fit rounded-[50px] p-1.5 text-white text-2xl font-normal'>Voir plus</button>
                             </Link>
                         </div>

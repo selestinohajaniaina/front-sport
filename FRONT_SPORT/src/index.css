@@ -60,3 +60,16 @@
 .resize{
   resize: none;
 }
+.bg_login{
+  background: url("../src/assets/contact_bg.png") no-repeat center center/cover;
+}
+.content_login{
+  width: min(90%);
+  margin-inline: auto;
+}
+::placeholder{
+  @apply text-black text-opacity-50
+}
+.best-login{
+  grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+}
