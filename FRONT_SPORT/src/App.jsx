@@ -12,19 +12,19 @@ import './App.css'
 
 function App() {
 
-  return (
-    <Router>
-      <Routes>
-        <Route path='/' element={ <FirstPage/> } />
-        <Route path="/login" element={<Login/>} />
-        <Route path="/signup" element={<Signup/>} />
-        <Route path="/dashboard" element={<Dashboard/>}/>
-        <Route path='/entrainer' element={<Entrainer/>}/>
-        <Route path='/regime' element={<Regime/>}/>
-        <Route path='/accessoire' element={<Accessoire/>}/>
-      </Routes>
-    </Router>
-  )
-}
+    return (
+        <Router>
+        <Routes>
+            <Route path='/' element={ <FirstPage/> } />
+            <Route path="/login" element={<Login/>} />
+            <Route path="/signup" element={<Signup/>} />
+            <Route path="/dashboard" element={<Dashboard/>}/>
+            <Route path='/entrainer' element={<Entrainer/>}/>
+            <Route path='/regime' element={<Regime/>}/>
+            <Route path='/accessoire' element={<Accessoire/>}/>
+        </Routes>
+        </Router>
+    )
+    }
 
 export default App
