@@ -11,6 +11,7 @@ const Data = [
         alt: 'entrainement',
         title: "Entraînements",
         subtitle: "L'entraînement régulier est fondamental pour préserver et améliorer la santé, et il est recommandé de le pratiquer plusieurs fois par semaine pour en optimiser les avantages physiques et mentaux.",
+        path: "/entrainer"
     },
     {
         id: 2,
@@ -18,6 +19,7 @@ const Data = [
         alt: 'Régimes',
         title: "Régimes",
         subtitle: "Une alimentation équilibrée et adaptée permet d'optimiser les résultats sportifs, de réduire le risque de blessures et de promouvoir la santé globale.",
+        path: "/regime"
     },
     {
         id: 3,
@@ -25,6 +27,7 @@ const Data = [
         alt: 'Accesoires',
         title: "Accesoires",
         subtitle: "Trouvez les équipements parfaits pour exceller dans votre passion sportive et améliorer votre performance.",
+        path: "/accessoire"
     },
 ];
 
@@ -44,7 +47,7 @@ return (
                         <div className='text-center flex items-center flex-col gap-4'>
                             <h1 className='text-cyan-950 text-4xl font-normal'>{item.title}</h1>
                             <p className='text-justify text-black text-2xl font-normal'>{item.subtitle}</p>
-                            <Link to='/'>
+                            <Link to={item.path}>
                                 <button className='bg-cyan-500 w-fit rounded-[50px] p-1.5 text-white text-2xl font-normal'>Voir plus</button>
                             </Link>
                         </div>
